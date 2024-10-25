@@ -4,6 +4,5 @@
 # Starting by /etc/systemd/system/hwscr.service
 
 for i in {1..10}; do	
-	echo "$i hwscr.service" >> ~/it-training/linux/services/hwscr/hwscr-result.txt
+	echo "$i hwscr.service" >> /home/roman/it-training/linux/services/hwscr/hwscr-result.txt
 done
-
