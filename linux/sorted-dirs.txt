@@ -1,0 +1,10 @@
+5939	/
+2464	/usr
+842	/var
+182	/boot
+101	/home
+7	/etc
+2	/run
+1	/tmp
+
+sudo du -m --max-depth=1 / | sort -n -r | head -n 8 > /home/roman/it-training/linux/sorted-dirs.txt
