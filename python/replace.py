@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-#task description: написать скрипт заменяющий одну букву на другую в слове
+#  Task description: Написать скрипт, заменяющий одну букву на другую.
 
 word1 = str(input("Enter the word: "))
 letter1 = str(input("Enter the letter you want to change in the word: "))
