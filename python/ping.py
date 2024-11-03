@@ -1,8 +1,12 @@
 #! /usr/bin/env python3
 
-import os
+import subprocess
 
-ip_addr = str(input("Enter the address to ping: "))
-count = str(input("Enter the times of ping: "))
+host = input("Enter the ip address or hostname.com to ping: ")
 
-print(os.popen(f"ping {ip_addr} -c {count}").read())
+result = subprocess.run(["ping", "-c", "5", f"{host}"])
+
+if result.returncode == 0:
+    print("success")
+else:
+    print("doesn't work")
