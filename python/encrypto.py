@@ -6,6 +6,9 @@
 from cryptography.fernet import Fernet  #Fernet - тип аутентифицированного шифрования
 
 key = Fernet.generate_key()  #key generation
+key_file = str(input("Enter the path to file you to save the cryptography key: "))
+with open(f"{key_file}", "wb") as key_file:
+    key_file.write(key)
 
 cipher = Fernet(key)  #cipher function
 
