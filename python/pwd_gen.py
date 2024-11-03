@@ -1,12 +1,12 @@
 #! /usr/bin/env python3
 
-#task description: написать генератор пароля
+#  Task description: написать генератор пароля
 
 import random
 
-password = "abcdefghijklopqrstuvwxyz!@#$%^&*()_+".join("ABCDEFGHIJKLOPQRSTUVWXYZ123215498712936789213")
+password_pattern = "abcdefghijklmnopqrstuvwxyz".join("ABCDEFGHIJKLMNOPQRSTUVWXYZ").join("123215498712936789213").join("!@#$%^&*()_+|\/<>,.")
 password_length = int(input("Enter the length of the password: "))
 
-a = "".join(random.sample(password,password_length))
+password = "".join(random.sample(password_pattern, password_length))
 
-print(f"Your password is: {a} \nSave it in safe place and dont show anybody!")
+print(f"Your password is: {password} \nKeep it in a safe place and don't show it to anyone!")
